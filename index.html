@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="./img/og-preview.png" >
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Pigin - Quản lý tài chính cá nhân và đầu tư</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.0.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.0.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/9.0.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/9.0.0/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/9.0.0/firebase-functions.js"></script>
+    <script defer src="/__/firebase/9.0.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/9.0.0/firebase-storage.js"></script>
+    <script defer src="/__/firebase/9.0.0/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/9.0.0/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/9.0.0/firebase-performance.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+  
+  </head>
+  <body>
+    <div class="main">
+
+      <!-- Cover -->
+      <div class="cover">
+        <div class="cover-content">
+          <img src="./img/logo.png" alt="" class="logo">
+          <p class="cover-title">
+            Pigin
+          </p>
+          <p class="cover-description">
+            Quản lý tài chính cá nhân và đầu tư
+          </p>
+          <button class="cover-btn">Đăng ký người dùng Beta</button>
+        </div>
+        <div>
+          <img src="./img/cover.png" alt="" class="cover-img">
+        </div>
+      </div>
+
+      <!-- Section 1: Ghi chép thu-chi -->
+      <div class="section-function function1">
+        <div class="section-function-img function-img1">
+          <img src="./img/ghi-chep.png" alt="" style="margin-left: auto; margin-right: auto;">
+        </div>
+        <div class="section-function-content">
+          <p class="section-title">Ghi chép thu - chi</p>
+          <p class="section-description">
+            Ghi chép thu - chi đơn giản và hiệu quả. Với hệ thống phân loại thu nhập và chi phí của Pigin, 
+            chỉ mất 10s để ghi chép lại một chi tiêu phát sinh. Thật dễ dàng để tạo thói quen ghi chép.
+          </p>
+        </div>
+      </div>
+
+      <!-- Section 2: 6 hũ tài chính -->
+      <div class="section-function function2">
+        <div class="section-function-content">
+          <p class="section-title">6 chiếc hũ tài chính</p>
+          <p class="section-description">
+            Áp dụng nguyên tắc 6 chiếc lọ tài chính, Pigin giúp bạn quản lý hiệu quả ngân sách của mình. 
+            Bạn sẽ biết được nên chi tiêu bao nhiêu cho một vấn đề và tiến trình tích lũy của bản thân.
+          </p>
+        </div>
+        <div class="function-img2" >
+          <img src="./img/6-chiec-hu.png" alt="" style="margin-left: auto;">
+        </div>
+      </div>
+
+      <!-- Section 3: Đầu tư -->
+      <div class="section-function function3">
+        <div class="section-function-img function-img3">
+          <img src="./img/dau-tu.png" alt="" style="margin-right: auto;">
+        </div>
+        <div class="section-function-content">
+          <p class="section-title">Đầu tư sinh lời</p>
+          <p class="section-description">Rủi ro thấp và lợi nhuận bền vững. Pigin đã chọn lọc cho bạn 
+            những danh mục đầu tư an toàn và hấp dẫn nhất. Mọi thứ luôn sẵn sàng, chỉ cần bạn click chuột.</p>
+        </div>
+      </div>
+
+      <!-- Section 4: Carousel -->
+      <div class="carousel">
+        <input type="radio" name="slider" id="item-1" checked>
+        <input type="radio" name="slider" id="item-2">
+        <input type="radio" name="slider" id="item-3">
+      <div class="carousel-review">
+        <label class="carousel-review-img" for="item-1" id="review-1">
+          <img src="./img/danh-gia-1.png" alt="song" class="img-review">
+        </label>
+        <label class="carousel-review-img" for="item-2" id="review-2">
+          <img src="./img/danh-gia-2.png" alt="song" class="img-review">
+        </label>
+        <label class="carousel-review-img" for="item-3" id="review-3">
+          <img src="./img/danh-gia-3.png" alt="song" class="img-review">
+        </label>
+      </div>
+      </div>
+
+      <!-- Section 5: Đăng ký -->
+      <div class="section-form">
+        <div >
+          <p class="section-form-title">Đăng ký người dùng Beta</p>
+          <p class="section-form-description">Đăng ký để trở thành một trong những người đầu tiên sử dụng khi Pigin ra mắt bản Beta</p>
+        </div>
+        <div class="wrapper">
+          <input type="checkbox" id="click">
+          <label class="btn-1" for="click">Đăng ký</label>
+          <div class="field">
+             <input type="email" placeholder="Email Address" id="email">
+             <label for="" class="btn-2" onclick="subscribe()">Đăng ký</label>
+             <p id="check-email"></p>
+             <!-- for="click" to run -->
+          </div>
+       </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <div class="footer-name">
+          <p class="footer-title">Pigin</p>
+          <p class="footer-description">Quản lý tài chính cá nhân và đầu tư</p>
+        </div>
+        <div>
+          <p class="footer-contact">
+            Liên hệ: pigin.fintech@gmail.com
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="./main.js"></script>
+    <script src="./form.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
+</html>
